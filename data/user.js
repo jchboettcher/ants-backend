@@ -2,9 +2,9 @@ const casual = require('casual')
 
 casual.define('user', () => ({
   name: casual.name,
-  level: casual.integer(1, 10),
-  steps: casual.integer(1, 20),
-  crumbs: casual.integer(1, 20),
+  level: casual.integer(1, 3),
+  steps: casual.integer(1, 5),
+  crumbs: casual.integer(1, 5),
 }))
 
 const usersData = []

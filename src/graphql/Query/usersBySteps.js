@@ -2,7 +2,12 @@ const User = require('../../models/User')
 
 const usersBySteps = async (obj, { level }, context) => {
   try {
-    const users = await User.query().where({level}).orderBy('steps','ASC','crumbs','ASC','createdAt','DESC').limit(5)
+    const users = await User.query()
+      .where({level})
+      .orderBy('steps','ASC')
+      .orderBy('crumbs','ASC')
+      .orderBy('createdAt','DESC')
+      .limit(5)
     return users
   } catch (error) {
     // eslint-disable-next-line no-console
