@@ -7,18 +7,14 @@ exports.up = async knex => createTableIfNotExists(knex, 'users', table => {
     .primary()
     .defaultTo(knex.raw('uuid_generate_v4()'))
 
-  table
-    .string('displayName')
-    .unique()
-    .notNullable()
+  table.string('name').notNullable()
 
-  table.string('email').unique()
-  table.string('password').notNullable()
+  table.integer('level').notNullable()
 
-  table.integer('score').notNullable().defaultTo(0)
-  table.integer('rank').notNullable()
+  table.integer('steps').notNullable()
+  table.integer('crumbs').notNullable()
 
-  table.string('updatedAt').notNullable()
+  table.string('createdAt').defaultTo(knex.fn.now())
 })
 
 exports.down = async knex => knex.schema.dropTableIfExists('users')

@@ -1,10 +1,10 @@
 const casual = require('casual')
 
 casual.define('user', () => ({
-  id: casual.uuid,
-  displayName: casual.name,
-  rank: casual.integer(0, 10),
-  updatedAt: (new Date()).getTime().toString(),
+  name: casual.name,
+  level: casual.integer(1, 10),
+  steps: casual.integer(1, 20),
+  crumbs: casual.integer(1, 20),
 }))
 
 const usersData = []

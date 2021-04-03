@@ -2,28 +2,27 @@
 
 module.exports = `
   type Mutation {
-    addUser(input: AddUser!): User
-    updateScore(id: ID!): User!
+    addUser(input: AddUser!): User!
   }
 
   type Query {
-    allUsers: [User!]!
-    userByName(displayName: String!, password: String!): User
+    usersBySteps(level: Int!): [User!]!
+    usersByCrumbs(level: Int!): [User!]!
   }
 
   type User {
     id: ID!
-    displayName: String!
-    email: String!
-    password: String!
-    score: Int!
-    rank: Int!
+    name: String!
+    level: Int!
+    steps: Int!
+    crumbs: Int!
     createdAt: String!
-    updatedAt: String!
   }
 
   input AddUser {
-    displayName: String!
-    password: String!
+    name: String!
+    level: Int!
+    steps: Int!
+    crumbs: Int!
   }
 `
