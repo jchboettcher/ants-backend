@@ -9,10 +9,12 @@ exports.up = async knex => createTableIfNotExists(knex, 'users', table => {
 
   table.string('name').notNullable()
 
+  table.string('game').notNullable()
+
   table.integer('level').notNullable()
 
-  table.integer('steps').notNullable()
-  table.integer('crumbs').notNullable()
+  table.integer('score1').notNullable()
+  table.integer('score2').notNullable()
 
   table.string('createdAt').defaultTo(knex.fn.now())
 })

@@ -1,7 +1,7 @@
 const merge = require('lodash.merge')
-const usersBySteps = require('./usersBySteps')
-const usersByCrumbs = require('./usersByCrumbs')
+const usersBy1 = require('./usersBy1')
+const usersBy2 = require('./usersBy2')
 
-const resolvers = [usersBySteps, usersByCrumbs]
+const resolvers = [usersBy1, usersBy2]
 
 module.exports = merge(...resolvers)

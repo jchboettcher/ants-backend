@@ -6,23 +6,25 @@ module.exports = `
   }
 
   type Query {
-    usersBySteps(level: Int!): [User!]!
-    usersByCrumbs(level: Int!): [User!]!
+    usersBy1(game: String!, level: Int!, limit: Int!): [User!]!
+    usersBy2(game: String!, level: Int!, limit: Int!): [User!]!
   }
 
   type User {
     id: ID!
     name: String!
+    game: String!
     level: Int!
-    steps: Int!
-    crumbs: Int!
+    score1: Int!
+    score2: Int!
     createdAt: String!
   }
 
   input AddUser {
     name: String!
+    game: String!
     level: Int!
-    steps: Int!
-    crumbs: Int!
+    score1: Int!
+    score2: Int!
   }
 `
