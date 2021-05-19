@@ -1,5 +1,3 @@
-// const { gql } = require('apollo-boost')
-
 module.exports = `
   type Mutation {
     addUser(input: AddUser!): User!
@@ -8,6 +6,8 @@ module.exports = `
   type Query {
     usersBy1(game: String!, level: Int!, limit: Int!): [User!]!
     usersBy2(game: String!, level: Int!, limit: Int!): [User!]!
+    recentUsersBy1(game: String!, level: Int!, limit: Int!, time: Int!): [User!]!
+    recentUsersBy2(game: String!, level: Int!, limit: Int!, time: Int!): [User!]!
   }
 
   type User {

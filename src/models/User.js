@@ -1,6 +1,9 @@
-const BaseModel = require('./BaseModel')
+const { Model } = require('objection')
+const knex = require('../lib/knex')
 
-class User extends BaseModel {
+Model.knex(knex)
+
+class User extends Model {
   static get tableName() {
     return 'users'
   }

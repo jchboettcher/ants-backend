@@ -10,10 +10,8 @@ const usersBy2 = async (obj, { game, level, limit }, context) => {
       .limit(limit)
     return users
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.warn(error)
-    throw new Error('failed to get users by crumbs')
-    // throw error
+    throw new Error('failed to get users by score1')
   }
 }
 const resolver = {

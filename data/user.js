@@ -8,8 +8,6 @@ casual.define('user', () => ({
   score2: casual.integer(1, 5),
 }))
 
-const usersData = []
-
 for (let i = 0; i < 10; ++i) {
   usersData.push(casual.user)
 }

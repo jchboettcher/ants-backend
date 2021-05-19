@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const path = require('path')
 require('dotenv').config({
   path: path.join(__dirname, '.env'),
@@ -10,7 +9,7 @@ const config = require('./src/config')
 module.exports = {
   client: 'pg',
   connection: {
-    connectionString: process.env.DATABASE_URL,
+    connectionString: config.db.database_url,
     ssl: true,
   },
   migrations: {
@@ -38,5 +37,4 @@ module.exports = {
       })
     },
   },
-
 }
