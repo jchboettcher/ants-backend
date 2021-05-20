@@ -1,7 +1,8 @@
 {
-  "name": "graphql-test-server",
+  "homepage": "https://github.com/jchboettcher/games-leaderboard-backend/",
+  "name": "games-leaderboard-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend for the leaderboards of some of my online games.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +10,14 @@
     "migrations": "npx knex migrate:latest",
     "rollback": "npx knex migrate:rollback",
     "seed": "npx knex seed:run",
-    "copy-env": "cp sample.env .env"
+    "copy-env": "cp sample.env .env",
+    "clean": "rm -rf node_modules package-lock.json && npm i"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jack Boettcher",
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.21.0",
-    "bcrypt": "^5.0.1",
     "casual": "^1.6.2",
     "dotenv": "^8.2.0",
     "graphql": "^15.5.0",
