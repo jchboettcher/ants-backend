@@ -17,13 +17,13 @@
   "author": "Jack Boettcher",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^2.21.0",
+    "apollo-server": "^2.25.3",
     "casual": "^1.6.2",
     "dotenv": "^8.2.0",
     "graphql": "^15.5.0",
     "knex": "^0.21.18",
     "lodash.merge": "^4.6.2",
-    "objection": "^2.2.14",
+    "objection": "^2.2.18",
     "pg": "^8.5.1"
   }
 }
