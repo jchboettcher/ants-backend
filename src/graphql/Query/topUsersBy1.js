@@ -14,9 +14,10 @@ const topUsersBy1 = async (obj, { game, level, limit }, context) => {
       if (count >= limit) {
         break
       }
-      if (!(user.name in names)) {
-        names[user.name] = 1
-        newusers.push(user)
+      const name = user.name.trim()
+      if (!(name in names)) {
+        names[name] = 1
+        newusers.push({...user,name})
         count++
       }
     }
