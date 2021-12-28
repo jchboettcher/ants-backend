@@ -10,8 +10,8 @@ module.exports = `
     recentUsersBy2(game: String!, level: Int!, limit: Int!, time: Int!): [User!]!
     topUsersBy1(game: String!, level: Int!, limit: Int!): [User!]!
     topUsersBy2(game: String!, level: Int!, limit: Int!): [User!]!
-    userByName1(game: String!, level: Int!, name: String!, limit: Int!): [User!]!
-    userByName2(game: String!, level: Int!, name: String!, limit: Int!): [User!]!
+    userByName1(game: String!, level: Int!, name: String!): [User!]!
+    userByName2(game: String!, level: Int!, name: String!): [User!]!
   }
 
   type User {

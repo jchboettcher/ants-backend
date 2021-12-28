@@ -1,13 +1,12 @@
 const User = require('../../models/User')
 
-const userByName1 = async (obj, { game, level, name, limit }, context) => {
+const userByName1 = async (obj, { game, level, name }, context) => {
   try {
     const users = await User.query()
       .where({game, level, name})
       .orderBy('score1','ASC')
       .orderBy('score2','ASC')
       .orderBy('createdAt','ASC')
-      .limit(limit)
     return users
   } catch (error) {
     console.warn(error)
